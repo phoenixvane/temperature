@@ -12,7 +12,7 @@ input.onButtonPressed(Button.B, function () {
 })
 let おんど = 0
 let はかる = 0
-basic.showString("Censor")
+basic.showString("Sensor")
 basic.forever(function () {
 	
 })
