@@ -1,5 +1,5 @@
 {
-    "name": "おんど",
+    "name": "temprature",
     "description": "",
     "dependencies": {
         "core": "*",
