@@ -1,18 +1,11 @@
-input.onButtonPressed(Button.A, function () {
-    はかる = 1
-    while (はかる == 1) {
-        おんど = input.temperature()
-        basic.showString("" + (おんど))
-        serial.writeValue("Celsius", おんど)
-        basic.pause(1000)
-    }
-})
-input.onButtonPressed(Button.B, function () {
-    はかる = 0
-})
-let おんど = 0
-let はかる = 0
-basic.showString("Sensor")
+let lt = 0
+let temp = 0
+basic.showString("temp/lt")
+basic.pause(500)
 basic.forever(function () {
-	
+    temp = input.temperature()
+    lt = led.brightness()
+    serial.writeValue("temp", temp)
+    serial.writeValue("lt", lt)
+    basic.pause(10000)
 })
